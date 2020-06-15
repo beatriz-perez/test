@@ -1,0 +1,29 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.header{
+    width: 100vw;
+    height: $headerHeightMobile;
+    border-bottom: 1px solid $colorShadow;
+    background-color: $backgroundHeader;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    @include mediaSize(tablet){
+        height: $headerHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $headerHeightDesktop;
+    }
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.titleBox{
+    padding: 5px;
+    margin-left: 5px;
+    @include centerFlexColumn;
+    @include mediaSize(tablet){
+        padding: 10px;
+        margin-left: 20px;
+    }
+}

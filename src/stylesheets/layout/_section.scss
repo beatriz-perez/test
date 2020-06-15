@@ -1,0 +1,45 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.main{
+    width: 100%;
+    background-color: $bacKgroundSection;
+    height: $sectionHeightMobile;
+    overflow: scroll;
+
+    @include mediaSize(tablet){
+        height: $sectionHeightTablet;
+        overflow: scroll;
+        @include centerFlexColumn;
+
+    }
+    @include mediaSize(desktop){
+        height: $sectionHeightDesktop;
+        overflow: scroll;
+        @include centerFlexColumn;
+    }
+}  
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.mainBox{
+    width: 100%;
+    height: auto;
+    background-color: $colorTheme5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include mediaSize(tablet){
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 745px;
+        height: 600px;
+        background-color: $colorTheme5;
+        box-shadow: 7px 7px 10px 7px $colorShadow;
+    
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 600px;
+        overflow: scroll;
+    }
+}

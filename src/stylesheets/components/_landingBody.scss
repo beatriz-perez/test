@@ -1,0 +1,74 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.landing{
+    width: 100vw;
+    height: $landingBodyHeightMobile;
+    background-color: $backgroundFooter;
+    overflow: scroll;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mediaSize(tablet){
+        height: $landingBodyHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $landingBodyHeightDesktop;
+    }
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.landingBox{
+    width: 90vw;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mediaSize(tablet){
+        width: 600px;
+        height: 350px;
+    }
+    @include mediaSize(desktop){
+        width: 600px;
+        height: 350px;
+    }    
+
+    &__textsBox{
+        text-align: center;
+    }
+    &__stepsBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        &--step{
+            width: 30%;
+            @include centerFlexColumn;
+            text-align: center;
+            @include mediaSize(tablet){
+                width: 25%;
+            }
+            @include mediaSize(desktop){
+                width: 25%;
+            }            
+        }
+        &--number{
+            color: $colorTheme3;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 2px solid $colorTheme3;
+            @include centerFlexRow;
+            margin-bottom: 15px;
+        }
+        &--text{
+            color: $colorTheme3;
+        }
+    }
+    &__button{
+        width: 120px;
+    }
+}

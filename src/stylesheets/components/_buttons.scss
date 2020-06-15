@@ -1,0 +1,37 @@
+// BUTTONS
+.button{
+    min-width: 70px;
+    min-height: 38px;
+    border-radius: 25px;
+    @include centerFlexRow;
+    &:hover{
+        filter: brightness(70%);
+    }
+    &__color1{
+        background-color: $colorTheme1;
+        color: $colorTextLight;
+        &--noFill{
+            background-color: $colorTransparent;
+            border: 2px solid $colorTheme1;
+            color: $colorTheme1;
+        }    
+    }
+    &__color2{
+        background-color: $colorTheme2;
+        color: $colorTextLight;
+        &--noFill{
+            background-color: $colorTransparent;
+            border: 2px solid $colorTheme2;
+            color: $colorTheme2;
+        }    
+    }
+    &__color3{
+        background-color: $colorTheme3;
+        color: $colorTextLight;
+        &--noFill{
+            background-color: $colorTransparent;
+            border: 2px solid $colorTheme3;
+            color: $colorTheme3;
+        }    
+    }
+}

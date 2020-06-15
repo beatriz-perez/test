@@ -1,0 +1,88 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.detail{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.detail_selected{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    .detail__title{
+        color: $colorTheme3;
+        margin-bottom: 1em;
+    }
+    &--wallet{
+        height: 60px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .walletLogo{
+            width: 50px;
+            margin: 5px;
+        }
+        .walletName{
+            margin-left: 25px;
+        }
+    }
+    .infoText{
+        color: $colorTheme3;
+        margin-top: 5px;
+    }
+    .currency{
+        display: inline-block;
+        width: 40px;
+        margin-left: 25px;
+        margin-right: 10px;
+    }
+    .arrow{
+        color: $colorTheme3;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+.detail_best{
+
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    .detail__title{
+        color: $colorTheme2;
+        margin-bottom: 1em;
+    }
+    .answerTitle {
+        margin-bottom: 10px;
+    }
+    .bestWallet{
+        text-transform: capitalize;
+        margin-right: 5px;
+        line-height: 20px;
+    }
+    .infoText{
+        color: $colorTheme2;
+        margin-top: 5px;
+    }
+    .currency{
+        display: inline-block;
+        width: 40px;
+        margin-left: 25px;
+        margin-right: 10px;
+    }
+    .arrow{
+        color: $colorTheme2;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+.navBox{
+    width: 100%;
+    @include centerFlexRow;
+    .backButton{
+        width:120px;
+    }
+}

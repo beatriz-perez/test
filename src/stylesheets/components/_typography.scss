@@ -1,0 +1,64 @@
+// TITLES
+.title{
+    font-family: $fontExtra;
+    font-weight: $fontExtraBold;
+    color: $colorTextBase;
+    text-transform: none;
+    font-size: 25px;
+    @include mediaSize(tablet){
+        font-size: 25px;
+    }
+
+    &__main{
+        font-size: 60px;
+        @include mediaSize(tablet){
+            font-size: 90px;
+        }
+    }
+    &__subMain{
+        font-size: 25px;
+        color: $colorTheme1;
+        @include mediaSize(tablet){
+            font-size: 40px;
+        }
+    }
+    &__header{
+        font-size: 30px;
+        @include mediaSize(tablet){
+            font-size: 45px;
+        }
+    }
+    &__subHeader{
+        font-size: 12.5px;
+        color: $colorTheme1;
+        @include mediaSize(tablet){
+            font-size: 20px;
+        }
+    }
+}
+
+// TEXTS
+.text{
+    font-family: $fontBase;
+    font-weight: $fontRegular;
+    color: $colorTextBase;
+    text-transform: none;
+    &__base{
+        font-size: 14px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+    &__medium{
+        font-size: 16px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+    &__big{
+        font-size: 20px;
+        &--bold{
+            font-weight: $fontBold;
+        }
+    }
+}

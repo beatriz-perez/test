@@ -1,0 +1,53 @@
+// BASIC COLORS
+$colorWhite: #FFFFFF;
+$colorMiddle: #292929;
+$colorBlack: #000000;
+$colorRed: #960200;
+$colorTransparent: transparent;
+$colorShadow: #5C5C5C;
+
+
+// THEME COLORS
+$colorTheme1: #426A5A;
+$colorTheme2: #BF6900;
+$colorTheme3: #432534;
+$colorTheme4: #FAFAFA;
+$colorTheme5: $colorWhite;
+
+// TEXT COLORS
+$colorTextBase: $colorBlack;
+$colorTextMiddle: $colorMiddle;
+$colorTextLight: $colorWhite;
+$colorTextAlert: $colorRed;
+
+// FONTS
+$fontExtra: 'Comfortaa', cursive;
+$fontBase: 'Roboto', sans-serif;
+$fontButton: $fontBase;
+
+$fontExtraBold: 600;
+$fontBold: 400;
+$fontRegular: 300;
+
+// BACKGROUNDS
+$backgroundLanding: $colorTheme5;
+$backgroundHeader: $colorTheme5;
+$bacKgroundSection: $colorTheme4;
+$backgroundFooter: $colorTheme5;
+
+// MEASUREMENTS
+// ---> Mobile:
+    $landingBodyHeightMobile: calc(100vh - 40px);
+    $footerHeightMobile: 40px;
+    $headerHeightMobile: 60px;
+    $sectionHeightMobile: calc(100vh - 100px);
+// ---> Tablet:
+    $landingBodyHeightTablet: calc(100vh - 40px);
+    $footerHeightTablet: 40px;
+    $headerHeightTablet: 90px;
+    $sectionHeightTablet: calc(100vh - 130px);
+// ---> Desktop:
+    $landingBodyHeightDesktop: calc(100vh - 50px);
+    $footerHeightDesktop: 50px;
+    $headerHeightDesktop: 90px;
+    $sectionHeightDesktop: calc(100vh - 140px);

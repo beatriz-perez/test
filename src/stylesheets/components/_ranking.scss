@@ -1,0 +1,55 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.ranking{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.ranking__title{
+    color: $colorTheme2;
+    margin-bottom: 1em;
+}
+.comparisonLine{
+    width: 100%;
+    height: 60px;
+    @include centerFlexRow;
+    border-bottom: 1px solid $colorShadow;
+    &:last-child{
+        border-bottom: none;
+    }
+    &__box{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        width: 30px;
+        text-align: center;
+        font-size: 25px;
+        @include mediaSize(tablet){
+            width: 35px;
+            font-size: 30px;
+        }    
+    }
+    &__name{
+        width: 80px;
+    }
+    &__price{
+        width: 110px;
+        overflow: hidden;
+        @include mediaSize(tablet){
+            width: 146px;
+            overflow: hidden;
+        }    
+    }
+    &__position{
+        width: 70px;
+        @include mediaSize(tablet){
+            min-width: 120px;
+        }    
+    }
+}

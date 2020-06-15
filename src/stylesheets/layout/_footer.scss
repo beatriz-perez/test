@@ -1,0 +1,39 @@
+// ESTILOS DE CONTENEDOR -----------------------------------------
+.footer{
+    width: 100vw;
+    height: $footerHeightMobile;
+    border-top: 1px solid $colorShadow;
+    background-color: $backgroundFooter;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    @include mediaSize(tablet){
+        height: $footerHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $footerHeightDesktop;
+    }
+}
+
+// ESTILOS DE ELEMENTOS -------------------------------------------
+.logoContainer{
+    position: relative;
+    height: $footerHeightMobile;
+    width:200px;
+    @include mediaSize(tablet){
+        height: $footerHeightTablet;
+    }
+    @include mediaSize(desktop){
+        height: $footerHeightDesktop;
+    }
+}
+.logo{
+    @include centerAll;
+}
+.loveIcon{
+    color: $colorMiddle;
+    margin-left: 5px;
+}

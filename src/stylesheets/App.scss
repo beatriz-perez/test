@@ -1,0 +1,28 @@
+// Reset, Variables y Mixins:
+@import './core/reset';
+@import './core/variables';
+@import './core/mixins';
+
+// Estilos de layout:
+@import './layout/header';
+@import './layout/section';
+@import './layout/footer';
+
+// Estilos por componente:
+@import './components/typography';
+@import './components/buttons';
+
+@import './components/landingBody';
+@import './components/form';
+@import './components/ranking';
+@import './components/detail';
+
+
+// ESTILOS GENERALES DE PÁGINA ---------------------------------------
+.App{
+  width: 100vw;
+  cursor: default;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
