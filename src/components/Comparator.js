@@ -21,8 +21,11 @@ export default class Comparator extends Component {
     constructor(props) {
         super(props);
         this.changeSelection = this.changeSelection.bind(this);
+        this.showLoader = this.showLoader.bind(this);
+        this.updateInfo = this.updateInfo.bind(this);
         this.fetchInfo = this.fetchInfo.bind(this);
         this.state = {
+            loading: 'false',
             apiInfo: {},
             selection: {
                 from: 'LTC',
@@ -45,13 +48,22 @@ export default class Comparator extends Component {
     }
 
     fetchInfo() {
+        this.showLoader(true);
         let pairQueryFrom = this.state.selection.from;
         let pairQueryTo = this.state.selection.to;
         let amountQuery = this.state.selection.amount;
         fetchApiInfo(pairQueryFrom, pairQueryTo, amountQuery)
-            .then(data => { this.setState({ apiInfo: data }); })
+            .then((data)=> { this.updateInfo(data); })
             .catch((error) => { console.log(error); });
     }
+
+    showLoader(loadInfo) {
+        this.setState({'loading': loadInfo });
+    };
+    updateInfo(data) {
+        this.setState({ apiInfo: data });
+        this.showLoader(false);
+    };
 
     changeSelection(name, value) {
         const newSelection = this.state.selection;
@@ -67,7 +79,7 @@ export default class Comparator extends Component {
             <React.Fragment>
                 <Header/>
                 <Section id="main" role="main content">
-                    <Form info={this.state.selection} media={currencyOptions} task={this.changeSelection} />
+                    <Form info={this.state.selection} loading={this.state.loading} media={currencyOptions} task={this.changeSelection} />
                     <Switch>
 
                         <Route exact path="/compare">

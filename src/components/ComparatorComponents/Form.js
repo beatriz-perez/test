@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 
+// Media:
+import UnicornsLogo from '../../images/logo-localUnicorns.png';
+
 // Componentes:
 import SelectInput from './FormComponents/SelectInput';
 import NumberInput from './FormComponents/NumberInput';
@@ -16,7 +19,7 @@ export default class Form extends Component {
     }
 
     render() {
-        const {info:{amount, from, to}, media, task} = this.props;
+        const {info:{amount, from, to}, media, task, loading} = this.props;
         const selectedFrom = media.filter( item => item.queryValue === from)[0];
         const selectedTo = media.filter( item => item.queryValue === to)[0];
 
@@ -61,6 +64,16 @@ export default class Form extends Component {
                     labelText="amount"
                     sampleText="1"
                 />
+                <div
+                    className={
+                    `loaderContainer ${loading === true 
+                    ? 'seen' 
+                    : 'hidden'}`
+                    }
+                >
+                    <img className="unicorn-loader" src={UnicornsLogo} alt="logo-reactUnicorns-loader" />
+                    <p className="introText">Updating rates info...</p>
+                </div>
             </form>
         )
     }

@@ -53,7 +53,11 @@ export default class Ranking extends Component {
             )
         };
 
-        const ordered = Object.entries(apiInfo).sort((a, b) => a[1] > b[1] ? -1 : 1);
+        let info = {};
+        for (const prop in apiInfo) {
+            info[prop] = parseFloat(apiInfo[prop]).toFixed(9);
+        };
+        const ordered = Object.entries(info).sort((a, b) => a[1] > b[1] ? -1 : 1);
         const results = ordered.map(generateJSX);
 
         return (
